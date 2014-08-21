@@ -1,5 +1,9 @@
-<% _.each(feeds, function (feed) { %>
+<div class="col-xs-8 col-xs-offset-2 sep-top text-center">
 
-	<span class="label label-primary"><%= feed %></span>
+	<% _.each(feeds, function (feed) { %>
 
-<% }); %>
+		<span class="feed-item label label-primary"><%= feed %></span>
+
+	<% }); %>
+
+</div>
