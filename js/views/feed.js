@@ -51,7 +51,7 @@ module.exports = Backbone.View.extend({
         this.$el.html( template({ 
             feedItems: collection, 
             errors: this.collection.errors,
-            numPages: Math.floor( this.collection.length / this.itemsPerPage ),
+            numPages: Math.ceil( this.collection.length / this.itemsPerPage ),
             currentPage: page
         }) );
 
@@ -87,7 +87,8 @@ module.exports = Backbone.View.extend({
         var elClicked = $(e.currentTarget);
         // Var to hold new page number
         var pageNo = undefined;
-
+        // Get the page count.
+        var pageCount = Math.ceil( this.collection.length / this.itemsPerPage );
         // Get the current active page
         var currentPageNo = this.$el.find('.pagination .active a').html();
 
@@ -102,8 +103,13 @@ module.exports = Backbone.View.extend({
         } 
         // END if page number
 
-        // Call view's render function
-        this.render(pageNo); 
+        // If the page number is within range
+        if ( pageNo > 0 && pageNo <= pageCount ) {
+            // Call view's render function
+            this.render(pageNo);             
+        }
+
+
     }
 
 });  

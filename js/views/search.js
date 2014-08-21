@@ -30,7 +30,7 @@ module.exports = Backbone.View.extend({
     events: {
         'click .feed-item' : 'getFeed'
     },
- 
+  
 	// Is called at instantiation
     initialize: function () {
  
