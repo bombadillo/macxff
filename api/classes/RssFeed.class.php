@@ -141,13 +141,17 @@ class RssFeed implements iRssFeed {
                 // Add simplexml image element and assign it to the $image variable
                 $image = $item->addChild('image');
 
-                // Loop each of the attributes and add as a child node.
-                foreach($thumbnail->attributes() as $attr => $value)
-                {
-                    // Add the thumbnail attributes to the newly added element
-                    $image->addChild($attr, $value);
+                // If the thumbnail exists
+                if ($thumbnail) {
+                    // Loop each of the attributes and add as a child node.
+                    foreach($thumbnail->attributes() as $attr => $value)
+                    {
+                        // Add the thumbnail attributes to the newly added element
+                        $image->addChild($attr, $value);
+                    }
+                    // END loop attributes
                 }
-                // END loop attributes
+                // END if thumbnail
             }
             // END if media namespace
 
