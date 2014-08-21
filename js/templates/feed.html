@@ -1,0 +1,11 @@
+<div class="list-group">
+
+	<% _.each(feedItems, function (item) { %>
+
+		<a href="<%= item.link %>" class="list-group-item active">
+			<h4 class="list-group-item-heading"><%= item.title %></h4>
+			<p class="list-group-item-text"><%= item.description %></p>
+		</a>
+
+	<% }); %>
+</div>
