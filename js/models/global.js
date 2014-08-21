@@ -46,11 +46,12 @@ var BasicModel = Backbone.Model.extend(
 var BasicCollection = Backbone.Collection.extend(
 {
     model: BasicModel,
-
+ 
     // This function can be used to alter the url such as add parameters for GET requests..
     url: function()
     {
         var params = (this.params) ? this.params : '';
+
         return this.urlRoot + params;       
     },
 
@@ -66,7 +67,7 @@ var BasicCollection = Backbone.Collection.extend(
             this.errors = true; 
         }
 
-        return data;
+        return data.data;
     },
 
     // This function is used to paginate a collection. 
