@@ -9,17 +9,20 @@
    ========================================================================== */
 
 body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+  padding-top: 50px;
+  padding-bottom: 20px;
     
 } 
  
 /* Helper Styles */
 
 .ghost {
-    visibility: hidden; 
+  visibility: hidden; 
 }
 
+.sep-top {
+  padding-top: 20px;
+}
 
 /* ==========================================================================
    Responsive Styles
@@ -41,26 +44,10 @@ body {
 
 /* Search Container */
 
-  #convert {
-    .form-box {
-      margin-top: 90px;
-      .submit {
-        margin-top: 10px;
-      }
-    }
-
-    .errors {
-      color: #fff;
-      left: 5%;
-      position: absolute;
-      top: 9px;
-      width: 91%;
-      text-align: center;
-    }    
-
-    .result {
-      margin-top: 10px;
-      font-weight: bold;
+  #search {
+    .feed-item:hover {
+      background-color: @brand-info;
+      cursor: pointer;
     }
   }
 
