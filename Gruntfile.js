@@ -91,7 +91,7 @@ module.exports = function(grunt) {
 		    	tasks: ["less"]
 		    },
 		    scripts: {
-		    	files: ["js/**/*.js", "!js/app.bundle.js", "!js/app.bundle.test.js"],
+		    	files: ["js/**/*.js", "js/**/*.html", "!js/app.bundle.js", "!js/app.bundle.test.js"],
 		    	tasks: ["browserify"]
 		    }
 		}			  
